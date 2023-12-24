@@ -1,7 +1,6 @@
 from django.db import models
 from datetime import datetime
 
-
 ###### Model Empresa ######
 class Empresa(models.Model):
     nome = models.CharField('nome', max_length=100)
@@ -33,6 +32,12 @@ class Job(models.Model):
     beneficio = models.TextField('beneficio')
     titulo = models.CharField('titulo', max_length=100)
     created_at = models.DateTimeField('created_at',default = datetime.now())
+    especializacao = models.TextField('especializacao')
+    
+    class Meta: 
+        pass
+
+class Categoria(models.Model):
 
     class Meta:
         pass
